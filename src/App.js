@@ -38,14 +38,13 @@ class App extends React.Component {
       ],
       home: {
         title: 'Full stack developer',
-        subTitle: 'Please hire me, I beg you',
         text: 'Check my projects below'
       },
       about: {
-        title: 'About me',
+        title: 'CV',
       },
       contact: {
-        title: 'Let\'s talk',
+        title: 'Contact',
       },
       darkmode: true,
     }
@@ -129,12 +128,12 @@ class App extends React.Component {
                   value={this.state.darkmode}
 
                   onToggle={(value) => {
-                    console.log(this.state.darkmode);
                     this.setState({
                       // darkmode: !value,
                       darkmode: !this.state.darkmode,
 
                     })
+                    this.forceUpdate();
                   }} />
 
               </div>
@@ -144,7 +143,7 @@ class App extends React.Component {
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className={linkClass + " nav-link nav-item starcraft-font"} to="/" onClick={() => { this.musicOn ? this.soundAutoPlay(nevermind) : this.musicOn = false }}>Home</Link>
-                <Link className={linkClass + " nav-link nav-item starcraft-font"} to="/about" onClick={() => { this.musicOn ? this.soundAutoPlay(familiar) : this.musicOn = false }}>About</Link>
+                <Link className={linkClass + " nav-link nav-item starcraft-font"} to="/about" onClick={() => { this.musicOn ? this.soundAutoPlay(familiar) : this.musicOn = false }}>CV</Link>
                 <Link className={linkClass + " nav-link nav-item starcraft-font"} to="/contact" onClick={() => { this.musicOn ? this.soundAutoPlay(redbone) : this.musicOn = false }}>Contact</Link>
 
 
