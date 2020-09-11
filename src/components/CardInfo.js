@@ -8,8 +8,7 @@ function CardInfo(props) {
 
     return (
         <animated.div className="g-card-info" style={style}>
-            {/* <a href={props.link} target="_blank" rel="noopener noreferrer"><p className="g-card-title">{props.title}</p></a> */}
-            <p className="g-card-sub-title">{props.subTitle}</p>
+            <p className={props.darkmode ? "g-card-sub-title-dark" : "g-card-sub-title"} >{props.subTitle}</p>
             <p> {props.description} </p>
         </animated.div>
     );

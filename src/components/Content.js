@@ -9,6 +9,7 @@ function Content(props) {
             <Row className="justify-content-center">
                 <Col md={8}>
                     {props.children}
+
                 </Col>
             </Row>
         </Container>

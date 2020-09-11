@@ -1,3 +1,7 @@
+*{
+  outline: 1px solid red;
+}
+
 @font-face {
   font-family: starcraftFont;
   src: url(assets/fonts/starcraft.ttf);
@@ -7,6 +11,7 @@
   font-family: commandFont;
   src: url(assets/fonts/command.ttf);
 }
+
 
 body {
   margin: 0px;
@@ -19,7 +24,8 @@ body {
 
 .dark-mode{
   background-color: #160f30 !important;
-  color: white;
+  color: #69779b;
+  width: 100%;
 }
 
 .dark-mode-link{
@@ -33,9 +39,11 @@ body {
   text-decoration: none;
 }
 
+
 .dark-text{
   color: #eae7af !important;
 }
+
 
 .zerg-logo{
   background: transparent;
@@ -45,7 +53,6 @@ body {
 
 .zerg-logo:hover{
   animation: zerg-logo 0.5s alternate infinite ease-in-out;
-
 }
 
 @keyframes zerg-logo {
@@ -57,9 +64,7 @@ body {
   font-family: starcraftFont;
 }
 
-.command-font{
 
-}
 .nav-item{
   font-size: 20px;
   font-weight: 900;
@@ -75,12 +80,12 @@ body {
   margin: 50px;
   /* margin-right: 200px; */
   /* margin-left: 200px; */
-  max-width: 300px;
+  /* max-width: 300px; */
 }
 
 .card-container{
-  margin-left: 300px;
-  margin-right: 300px;
+  margin: auto;
+  width: 100%;
 }
 
 
@@ -89,7 +94,7 @@ body {
   margin-right: auto;
   margin-top: 50px;
   border-radius: 100px;
-  height: 150px;
+  height: 100px;
   width: 150px;
 }
 
@@ -97,6 +102,21 @@ body {
   animation: cujo 0.5s alternate infinite ease-in-out;
 
 }
+
+.cv-margin-bottom{
+  margin-bottom: 10rem;
+}
+.cv-margin-top{
+  margin-top: 1rem;
+}
+
+.cv-section-margin-top{
+  margin-top: 4rem;
+}
+.cv-margin-bottom li{
+  margin-bottom: 1rem;
+}
+
 
 @keyframes cujo {
   0%   {transform: scale(.95);}
@@ -111,12 +131,13 @@ body {
   cursor: pointer;
   border-radius: 10px;
   margin-bottom: 10px;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   box-shadow: 0px 0px 3px 1px #ccc;
 }
 
 .g-card-description{
+  width: 300px;
   font-size: 16px;
   margin: 0px;
   height: 50px;
@@ -131,13 +152,72 @@ body {
   min-height: 100px;
 }
 
-.g-card-sub-title{
+.g-card-sub-title-dark{
+  color: #FFD2FC;
   font-size: 20px;
   margin: 0px;
   text-align: center;
 
 }
 
+.cv-title{
+  color: #231651;
+}
+.cv-title-dark{
+  color: #eae7af;
+}
+
+.cv-date{
+  color: #2374AB;
+}
+.cv-date-dark{
+  color: #ffbd69;
+
+}
+.vertical-line-cv-dark{
+  border-left: 2px solid #eae7af;
+  height: 100rem;
+}
+
+/* @media only screen and (max-width: 960px) {
+  .vertical-line-cv{
+    display: none;
+  }
+
+  .vertical-line-cv-dark{
+    display: none;
+  }
+} */
+.vertical-line-cv{
+  border-left: 2px solid #231651;
+  height: 100rem;
+}
+
+.horizontal-line-cv{
+  border-bottom: 2px solid #231651;
+  margin: 2rem 0;
+}
+.horizontal-line-cv-dark{
+  border-bottom: 2px solid #eae7af;
+  margin: 2rem 0;
+
+}
+
+.cv-subtitle{
+  color: #2374AB;
+
+}
+
+.main-container{
+  width: 100vw;
+}
+.g-card-sub-title{
+  color: #2374AB;
+  font-size: 20px;
+  margin: 0px;
+  text-align: center;
+
+}
 .success-msg{
   color: #56A773;
   padding: 10px 15px;
@@ -153,12 +233,7 @@ body {
   height: 24px;
   margin: 5px;
   background: transparent;
-  animation-name: spin;
   border-radius: 100px;
-
-  /* animation-duration: 5000ms;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;  */
 }
 
 .lang-logo-container{
@@ -168,20 +243,8 @@ body {
 
 }
 
-
-/* .lang-logo-image:hover{
-  animation: spin 1s ease-in-out;
-}
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-} */
 .lang-logo-image:hover {
-  animation: spin 3s ease-in-out;
+  animation: spin 0.5s ease-in-out;
 }
 
 @keyframes spin {
@@ -196,4 +259,32 @@ body {
 
 .center-text{
   text-align: center;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+  .cv-margin-bottom{
+    margin-bottom: 1rem;
+  }
+}
+
+.margin-top-cv{
+  margin-top: 2rem;
+}
+
+.margin-bot-cv{
+  margin-bottom: 1rem;
+}
+
+.letter-space{
+  letter-spacing: 2px;
+}
+
+.section-margin-cv-bot{
+  margin-bottom: 3rem;
+}
+
+.section-margin-cv-top{
+  margin-bottom: 1rem;
 }
